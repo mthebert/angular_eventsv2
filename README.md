@@ -44,4 +44,4 @@ At the center of all this, I will be creating this app while trying to add to my
 
 For more information on this project, feel free to contact me at [matt@thebert.com](mailto:matt@thebert.com) or on [Twitter](https://twitter.com/matt_thebert)
 
-### Project start: 12/29/2013
+### Project start: 1/10/2014
