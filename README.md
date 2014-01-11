@@ -33,7 +33,7 @@ OK, this isn't really necessary but for now the decision is instead of having a 
 There will be some testing to come, an actual data store of some sort to replace the JSON, and maybe we will push this to the cloud.
 
 -Better validation on the new events form
--use filter to display an icon for the session level
+-use filter to display an icon for the session level (intro, intermediate, advanced)
 
 ### PluralSight
 
