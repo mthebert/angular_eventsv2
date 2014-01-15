@@ -6,15 +6,16 @@ eventsApp.controller('EventController',
 		$scope.sortorder= '-upVoteCount';
 		// so we have our eventData model, calling the getEvent function and the callback is the function we pass the event to
 		// and the passback gets assigned to the $scope.event
-		eventData.getEvent().then(function(result) {
-			$scope.event = result;
-   			console.log($scope.event)
+
+		// this gives you access to the event object, the $scope.event is just a promise
+		$scope.event=eventData.getEvent();
+		// if you want access in the controller to the $scope.event object...
+		$scope.event.then(function(event){
+			console.log(event);
+		},function(status){
+			console.log(status);
 		});
-	
-        $scope.upVoteSession = function(session, event){
-        	// the console.log shows the difference between the event and the $scope.event when using promises
-        	console.log(event);
-        	console.log($scope.event);
+        $scope.upVoteSession = function(session){
 			session.upVoteCount++;
 		}
 		$scope.downVoteSession = function(session){
