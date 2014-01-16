@@ -6,12 +6,11 @@ Some decisions being made on top of AngularJS are:
 
 ## Angular-Seed
 
-I am using the [angular-seed](https://github.com/angular/angular-seed) as a base for the project.  It is a nice starting point for an AngularJS app.  Version 1.2.6 is where I'm jumping in.
+I am using the [angular-seed](https://github.com/angular/angular-seed) as a base for the project.  It is a nice starting point for an AngularJS app.  Version 1.2.6 is where I'm jumping in.  (See Notes below for a change to this)
 
 ## Bootstrap
 
 Why reinvent the wheel for CSS when you can add some quick styling to your app?  I still haven't made the leap to v3, so I'll stick to [v2.3.2](http://getbootstrap.com/2.3.2/)
-
 
 ## JQuery
 
@@ -23,7 +22,7 @@ I will also be using [Underscore.JS](http://underscorejs.org/) for some addition
 
 ## Node.JS
 
-For serving up my web app, I'll be using [Node.JS](http://nodejs.org/) while I develop locally.
+For serving up my web app, I'll be using [Node.JS](http://nodejs.org/) while I develop locally.  (See notes below for issues needed to resolve)
 
 ## JSON
 
@@ -34,6 +33,12 @@ There will be some testing to come, an actual data store of some sort to replace
 
 -Better validation on the new events form
 -use filter to display an icon for the session level (intro, intermediate, advanced)
+
+### Notes: 
+Angular: Most documentation has not caught up with 1.2.x.  There seems to be a big difference in the promises/resource area as well as some routing changes, so for the sake of making things easier for now - I have rolled back my Angular to v 1.1.5
+
+Node: When dealing with the sections with $q/$resource and promises, My node service did not allow the post to save data.  I had to edit my web-server.js to handle the post.  I found the solution [here](https://raw.github.com/glepretre/angular-seed/9108d8e4bf6f70a5145b836ebeae0db3f29593d7/scripts/web-server.js)
+
 
 ### PluralSight
 

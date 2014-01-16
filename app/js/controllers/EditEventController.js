@@ -2,17 +2,16 @@
 
 eventsApp.controller('EditEventController', 
 	function EditEventController($scope, eventData){
-		// newEventForm is from form name="newEventForm"
-		$scope.saveEvent = function(event, newEventForm){
-			console.log(newEventForm);
-			if(newEventForm.$valid){
+		$scope.event = {};
+		$scope.saveEvent= function(event, form){
+			if(form.$valid){
 				eventData.save(event)
 					.then(
-						function(response) {console.log('success', response)},
-						function(response) {console.log('failure', response)}
+						function(response){console.log('success', response)},
+						function(response){console.log('failure', response)}
 					);
 			}
-		};
+		}
 		$scope.cancelEdit = function(){
 			window.location = "/EventDetails.html";
 		}
