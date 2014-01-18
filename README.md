@@ -37,6 +37,7 @@ There will be some testing to come, an actual data store of some sort to replace
 -Wire up dave button on EditProfile to save user using service called userData, use a $resource and save to data/user/:userName
 -Store upvotes to a cookie, only allow one upvote per session
 -allow users to log in after storing profile, track upvotes in their user profile object
+-HTML 5 routing was not working right, fix this
 
 ### Notes: 
 Angular: Most documentation has not caught up with 1.2.x.  There seems to be a big difference in the promises/resource area as well as some routing changes, so for the sake of making things easier for now - I have rolled back my Angular to v 1.1.5
