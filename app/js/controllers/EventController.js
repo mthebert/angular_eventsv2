@@ -2,7 +2,7 @@
 
 eventsApp.controller('EventController', 
 	// eventData is a service we created to hold our data - it is being passed in, like scope, so we have access to it
-	function EventController($scope, $route){
+	function EventController($scope, eventData, $anchorScroll, $route){
 		$scope.sortorder= '-upVoteCount';
 
 		$scope.event=$route.current.locals.event;

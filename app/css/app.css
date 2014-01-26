@@ -104,3 +104,7 @@ a, .clickable {
     background-color: #272b30;
     color: white;
 }
+
+.btn-primary-hover{
+    background-color: #0087b9;
+}
