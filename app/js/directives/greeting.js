@@ -4,9 +4,9 @@ eventsApp.directive('greeting', function(){
 	return{
 		
 		restrict: 'E',
-		replace: true,
-		priority: -1,
 		template: "<button class='btn' ng-click='sayHello()'>Say Hello</button>",
+		transclude: true,
+		replace: true,
 		controller: function($scope){
 			var greetings = ['hello'];
 			$scope.sayHello = function(){
@@ -22,12 +22,7 @@ eventsApp.directive('greeting', function(){
 	return{
 		// require means we want to use a directive that has a controller, in order to share functionality
 		restrict: 'A',
-		// priority - higher is better
-		priority: -1,
-		// terminal - nothing of a lower priority gets called, ng-click is a directive with 0, so you have to use negative numbers
-		// if you are going to use terminal
-		terminal: true,
-		require: 'greeting',
+		require: '^greeting',
 		link: function(scope, element, attrs, controller){
 			controller.addGreeting('hei');
 		}
@@ -36,8 +31,7 @@ eventsApp.directive('greeting', function(){
 .directive('hindi', function(){
 	return{
 		restrict: 'A',
-		require: 'greeting',
-		priority: -2,
+		require: '^greeting',
 		link: function(scope, element, attrs, controller){
 			controller.addGreeting('Namaste!');
 		}		
