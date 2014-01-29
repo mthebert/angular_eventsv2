@@ -41,6 +41,11 @@ There will be some testing to come, an actual data store of some sort to replace
 -Convert editprofile.html to a template and add routing and link
 -create an about page using template instead of templateurl
 -add resolve to /events so page doesnt load until events have been loaded from disk
+-redo video 5-14 - directives and JQuery to redo the datepicker 
+- create a "focus" directive to place on input element that causes focus on load
+- directive that presses save when enter is pressed for form
+- replae event and session html on eventDetails with custom eventDetails and sessionThumbnail directives
+- on newEvent.html, combine eventDate input element and the datepicker directive into a single date-input directive
 
 ### Notes: 
 Angular: Most documentation has not caught up with 1.2.x.  There seems to be a big difference in the promises/resource area as well as some routing changes, so for the sake of making things easier for now - I have rolled back my Angular to v 1.1.5
