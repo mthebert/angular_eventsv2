@@ -8,7 +8,7 @@
                 <input id="eventName" type="text" focus required ng-model="event.name" placeholder="Name of your event" />
                 <label for="eventDate">Event Date: </label>
                 <div style="position:relative">
-                    <input id="eventDate" type="text" required date-keys ng-model="event.date" placeholder="format (mm/dd/yyyy)" />
+                    <input id="eventDate" type="text" required date-picker date-keys ng-model="event.date" placeholder="format (mm/dd/yyyy)" />
                     <date-picker for="eventDate"/>
                 </div>
                 <label for="eventTime">Event Time: </label>
